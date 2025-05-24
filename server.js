@@ -16,7 +16,7 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors({origin: 'https://diamondjewelry.onrender.com/'}))
+app.use(cors({origin: '*',}))
 
 // api endpoints
 app.use('/api/user', userRouter)
