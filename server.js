@@ -18,6 +18,12 @@ connectCloudinary()
 app.use(express.json())
 app.use(cors({origin: '*',}))
 
+
+app.get('/api/health', (req, res) => {
+    res.status(200).json({ status: 'OK' });
+  });
+  
+
 // api endpoints
 app.use('/api/user', userRouter)
 app.use('/api/product', productRouter)
