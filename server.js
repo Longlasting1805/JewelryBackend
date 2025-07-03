@@ -16,7 +16,8 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors({origin: '*',}))
+app.use(cors({origin: ['https://jewelryfrontend.onrender.com', 'https://jewelryadmin.onrender.com'],
+  credentials: true,}))
 
 
 app.get('/api/health', (req, res) => {
